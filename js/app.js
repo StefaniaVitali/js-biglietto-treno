@@ -23,8 +23,9 @@ userAge = parseInt (userAge);
 console.log(userAge);
 
 //calcolare il costo del biglietto base
-const ticketPrice = (kmViaggio * 0.21); //number
+let ticketPrice = (kmViaggio * 0.21); //number
 console.log(ticketPrice);
+
 
 //calcolare il costo del biglietto per i minorenni
 const discount20 = (ticketPrice*20/100); //number
@@ -32,23 +33,23 @@ console.log(discount20);
 const ticketPriceUnder18 = (ticketPrice - discount20); //number
 console.log(ticketPriceUnder18);
 
-//calcolare il costo del biglietto per over60
+//calcolare il costo del biglietto per over65
 const discount40 = (ticketPrice*40/100); //number
 console.log(discount40); 
-const ticketPriceOver60 = (ticketPrice - discount40); //number
-console.log(ticketPriceOver60);
+const ticketPriceOver65 = (ticketPrice - discount40); //number
+console.log(ticketPriceOver65);
 
 
 
 // //SE l'utente è minorenne applicare 20% di sconto
-// if (userAge <18){
-
-// }
+if (userAge < 18){
+console.log(ticketPriceUnder18)
+}
 // //SE INVECE l'utente è over 65 applicare il  40% di sconto
-// if else (){
-
-// }
+else if (userAge > 65){
+console.log(ticketPriceOver65)
+}
 // //ALTRIMENTI il costo è tot km *0.21 euro
-// else {
-
-// }
+else {
+console.log(ticketPrice)
+}
