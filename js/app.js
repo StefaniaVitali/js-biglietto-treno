@@ -12,13 +12,15 @@ console.log('Ciao!');
 let kmViaggio = prompt ('Quanti km devi percorrere?'); //string| null
 console.log(kmViaggio);
 //trasfomare il risultato da string a number
-kmViaggio = parseInt(kmViaggio); //come richiamarla giusta?
+kmViaggio = parseInt(kmViaggio); //number
 console.log(kmViaggio);
 
 //chiedere tramite prompt l'età del passeggiero
 let userAge = prompt ('Quanti anni hai?'); //string
 console.log(userAge);
 //trasfomare il risultato da string a number
+userAge = parseInt (userAge);
+console.log(userAge);
 
 //calcolare il costo del biglietto 
 //SE l'utente è minorenne applicare 20% di sconto
