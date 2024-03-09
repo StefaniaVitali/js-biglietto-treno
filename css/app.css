@@ -1,0 +1,45 @@
+/* RESET RULES */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:current-color;
+}
+
+ul,
+ol,
+menu{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* CUSTOM STYLE RULES */
+
+body{
+    background-color: rgb(8, 80, 106);
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* TYPOGRAFY RULES */
+h1,
+h2{
+    color:white;
+    text-align: center;
+    margin-top;
+}
+
+h1{
+    margin-top: 20px;
+}
