@@ -9,17 +9,11 @@ console.log('Ciao!');
 
 
 //chiedere tramite prompt quanti km vuole percorrere
-let kmViaggio = prompt ('Quanti km devi percorrere?'); //string| null
-console.log(kmViaggio);
-//trasfomare il risultato da string a number
-kmViaggio = parseInt(kmViaggio); //number
+let kmViaggio = parseInt(prompt ('Quanti km devi percorrere?')); //number perchè parsint trasfoma le stringhe in numeri -> prompt = string o null
 console.log(kmViaggio);
 
 //chiedere tramite prompt l'età del passeggiero
-let userAge = prompt ('Quanti anni hai?'); //string
-console.log(userAge);
-//trasfomare il risultato da string a number
-userAge = parseInt (userAge);
+let userAge = parseInt(prompt('Quanti anni hai?')); 
 console.log(userAge);
 
 //calcolare il costo del biglietto base
@@ -43,13 +37,27 @@ console.log(ticketPriceOver65);
 
 // //SE l'utente è minorenne applicare 20% di sconto
 if (userAge < 18){
-console.log(ticketPriceUnder18)
+console.log('Hai diritto allo sconto per gli under 18 e il tuo biglietto è: ' + ticketPriceUnder18.toFixed(2));
 }
 // //SE INVECE l'utente è over 65 applicare il  40% di sconto
 else if (userAge > 65){
-console.log(ticketPriceOver65)
+console.log( 'Hai diritto allo sconto per  gli over 65 e il tuo biglietto è: ' + ticketPriceOver65.toFixed(2));
 }
 // //ALTRIMENTI il costo è tot km *0.21 euro
 else {
-console.log(ticketPrice)
+console.log('il costo del tuo biglietto è :' + ticketPrice.toFixed(2));
 }
+
+//considerazioni sulla correzione dell'esercizio
+/* 
+1) 0.21 poteva essere un valore costante, visto che probabilmente viene da un database,
+così se cambia il valore dal database cambia automaticamente anche nel codice
+2) per calcolare lo sconto, si poteva semplificare ulteriormente senza fare il calcolo a parte 
+per ogni singolo sconto e dare un nome ad ognuna di queste variabili.
+  a)si calcola il prezzo base (0.21 * km)
+  b) dentro if / if else /else calcolare i 3 sconti (20%, 40%, 0%)
+  c)calcolo finale con l'applicazione dello sconto (prezzo base - lo sconto)
+ 3) per semplificare ancora di più si poteva dare una variabile con sconto = 0 e 
+ poi con if e if else  andare a sovrascrivere il valore sconto = 0 con l'applicazione del 20% 0 40%
+
+*/
