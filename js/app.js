@@ -33,20 +33,28 @@ console.log(discount40);
 const ticketPriceOver65 = (ticketPrice - discount40); //number
 console.log(ticketPriceOver65);
 
+//stampare il risultato nell'html
+const ticketPriceElement = document.getElementById('price');
 
 
 // //SE l'utente è minorenne applicare 20% di sconto
 if (userAge < 18){
 console.log('Hai diritto allo sconto per gli under 18 e il tuo biglietto è: ' + ticketPriceUnder18.toFixed(2));
+ticketPriceElement.innerHTML = 'Il tuo biglietto costa ' + ticketPriceUnder18.toFixed(2);
 }
 // //SE INVECE l'utente è over 65 applicare il  40% di sconto
 else if (userAge > 65){
 console.log( 'Hai diritto allo sconto per  gli over 65 e il tuo biglietto è: ' + ticketPriceOver65.toFixed(2));
+ticketPriceElement.innerHTML = 'Il tuo biglietto costa ' + ticketPriceOver65.toFixed(2);
 }
 // //ALTRIMENTI il costo è tot km *0.21 euro
 else {
 console.log('il costo del tuo biglietto è :' + ticketPrice.toFixed(2));
+ticketPriceElement.innerHTML = 'Il tuo biglietto costa ' + ticketPrice.toFixed(2);
 }
+
+
+
 
 //considerazioni sulla correzione dell'esercizio
 /* 
@@ -59,5 +67,5 @@ per ogni singolo sconto e dare un nome ad ognuna di queste variabili.
   c)calcolo finale con l'applicazione dello sconto (prezzo base - lo sconto)
  3) per semplificare ancora di più si poteva dare una variabile con sconto = 0 e 
  poi con if e if else  andare a sovrascrivere il valore sconto = 0 con l'applicazione del 20% 0 40%
-
+ 4) se avessimo voluto validare i dati avremmo dovuto utilizzare !isNan()
 */
